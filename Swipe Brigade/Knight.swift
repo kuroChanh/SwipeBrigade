@@ -27,7 +27,7 @@ class Knight: Image, Enemy{
         print("Knight Attack: ", attribute.attack)
         print("Knight Defense: ", attribute.defense)
         //set position
-        position = CGPoint(x: 1000, y: 1000)
+        position = CGPoint(x: 1000, y: 1650)
         print("Position: ", position)
     }
     
@@ -42,6 +42,12 @@ class Knight: Image, Enemy{
     func randDef() -> Float {
         //knight has high range (7, 8, 9)
         return Float(arc4random_uniform(3) + 7)
+    }
+    func update(_ deltaTime: TimeInterval) {
+        //the enemy moves down the screen
+        //;w; temp placement, change later
+        position.y -= 450 * CGFloat(deltaTime)
+        //when they're sent to jail, their positions will reset or be DESTROYED
     }
     required init?(coder aDecoder: NSCoder){
         fatalError("init(coder:) has not been found")

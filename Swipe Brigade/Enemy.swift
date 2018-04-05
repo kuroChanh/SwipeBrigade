@@ -26,4 +26,5 @@ protocol Enemy {
     func randSpeed() -> CGFloat
     func randAtk() -> Float
     func randDef() -> Float
+    func update(_ deltaTime: TimeInterval)
 }

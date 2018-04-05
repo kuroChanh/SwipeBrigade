@@ -20,6 +20,7 @@
 		BB94C3952076619100686979 /* Swordsman.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C3942076619100686979 /* Swordsman.swift */; };
 		BB94C3972076619B00686979 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C3962076619B00686979 /* Warrior.swift */; };
 		BB94C39920767B8000686979 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C39820767B8000686979 /* Image.swift */; };
+		BB94C39F2076C58600686979 /* TEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C39E2076C58600686979 /* TEST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		BB94C3942076619100686979 /* Swordsman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swordsman.swift; sourceTree = "<group>"; };
 		BB94C3962076619B00686979 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
 		BB94C39820767B8000686979 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		BB94C39E2076C58600686979 /* TEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +114,11 @@
 				BB94C35C20765A5A00686979 /* AppDelegate.swift */,
 				BB94C36220765A5A00686979 /* GameScene.swift */,
 				BB94C36420765A5A00686979 /* GameViewController.swift */,
+				BB94C39E2076C58600686979 /* TEST.swift */,
 				BB94C36620765A5A00686979 /* Main.storyboard */,
-				BB94C36920765A5A00686979 /* Assets.xcassets */,
 				BB94C36B20765A5A00686979 /* LaunchScreen.storyboard */,
 				BB94C36E20765A5A00686979 /* Info.plist */,
+				BB94C36920765A5A00686979 /* Assets.xcassets */,
 				BB94C3902076616400686979 /* Enemy.swift */,
 				BB94C3922076617100686979 /* Knight.swift */,
 				BB94C3942076619100686979 /* Swordsman.swift */,
@@ -282,6 +285,7 @@
 				BB94C3912076616400686979 /* Enemy.swift in Sources */,
 				BB94C36320765A5A00686979 /* GameScene.swift in Sources */,
 				BB94C36520765A5A00686979 /* GameViewController.swift in Sources */,
+				BB94C39F2076C58600686979 /* TEST.swift in Sources */,
 				BB94C35D20765A5A00686979 /* AppDelegate.swift in Sources */,
 				BB94C3952076619100686979 /* Swordsman.swift in Sources */,
 				BB94C3932076617100686979 /* Knight.swift in Sources */,

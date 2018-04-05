@@ -43,6 +43,9 @@ class Swordsman: Image, Enemy{
         //knight has high/low range (1, 2, 3)
         return Float(arc4random_uniform(3) + 1)
     }
+    func update(_ deltaTime: TimeInterval) {
+        
+    }
     required init?(coder aDecoder: NSCoder){
         fatalError("init(coder:) has not been found")
     }    
