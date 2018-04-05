@@ -10,7 +10,12 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    //test variables
+    let test1 = Knight()
+    let test2 = Swordsman()
+    let test3 = Warrior()
     override func didMove(to view: SKView) {
         backgroundColor = SKColor.black
+
     }
 }

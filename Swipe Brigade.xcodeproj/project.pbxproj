@@ -15,6 +15,10 @@
 		BB94C36D20765A5A00686979 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB94C36B20765A5A00686979 /* LaunchScreen.storyboard */; };
 		BB94C37820765A5A00686979 /* Swipe_BrigadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C37720765A5A00686979 /* Swipe_BrigadeTests.swift */; };
 		BB94C38320765A5A00686979 /* Swipe_BrigadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C38220765A5A00686979 /* Swipe_BrigadeUITests.swift */; };
+		BB94C3912076616400686979 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C3902076616400686979 /* Enemy.swift */; };
+		BB94C3932076617100686979 /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C3922076617100686979 /* Knight.swift */; };
+		BB94C3952076619100686979 /* Swordsman.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C3942076619100686979 /* Swordsman.swift */; };
+		BB94C3972076619B00686979 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C3962076619B00686979 /* Warrior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		BB94C37E20765A5A00686979 /* Swipe BrigadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swipe BrigadeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB94C38220765A5A00686979 /* Swipe_BrigadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe_BrigadeUITests.swift; sourceTree = "<group>"; };
 		BB94C38420765A5A00686979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB94C3902076616400686979 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		BB94C3922076617100686979 /* Knight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knight.swift; sourceTree = "<group>"; };
+		BB94C3942076619100686979 /* Swordsman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swordsman.swift; sourceTree = "<group>"; };
+		BB94C3962076619B00686979 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				BB94C36920765A5A00686979 /* Assets.xcassets */,
 				BB94C36B20765A5A00686979 /* LaunchScreen.storyboard */,
 				BB94C36E20765A5A00686979 /* Info.plist */,
+				BB94C3902076616400686979 /* Enemy.swift */,
+				BB94C3922076617100686979 /* Knight.swift */,
+				BB94C3942076619100686979 /* Swordsman.swift */,
+				BB94C3962076619B00686979 /* Warrior.swift */,
 			);
 			path = "Swipe Brigade";
 			sourceTree = "<group>";
@@ -262,9 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB94C3972076619B00686979 /* Warrior.swift in Sources */,
+				BB94C3912076616400686979 /* Enemy.swift in Sources */,
 				BB94C36320765A5A00686979 /* GameScene.swift in Sources */,
 				BB94C36520765A5A00686979 /* GameViewController.swift in Sources */,
 				BB94C35D20765A5A00686979 /* AppDelegate.swift in Sources */,
+				BB94C3952076619100686979 /* Swordsman.swift in Sources */,
+				BB94C3932076617100686979 /* Knight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
