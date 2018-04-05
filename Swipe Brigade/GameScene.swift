@@ -11,11 +11,13 @@ import GameplayKit
 
 class GameScene: SKScene {
     //test variables
-    let test1 = Knight()
-    let test2 = Swordsman()
-    let test3 = Warrior()
+    let test1 = Warrior()
+    let test4 = Image("shiba")
+    
     override func didMove(to view: SKView) {
-        backgroundColor = SKColor.black
-
+        //addChild(test4)
+        //test4.position = CGPoint(x: size.width/2, y: size.height/2)
+        addChild(test1)
+        //test1.position = CGPoint(x: size.width/2, y: size.height/2)
     }
 }

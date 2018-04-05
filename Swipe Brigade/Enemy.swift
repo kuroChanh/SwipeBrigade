@@ -20,12 +20,7 @@ struct Stats{
 
 protocol Enemy {
     ///variables
-    //relates to screen movement
-    var attribute: Stats{get set }
-    //var speed: CGFloat{ get set }
-    //combat variables
-    //var attack: Float{ get set }
-    //var defense: Float{ get set }
+    var attribute: Stats{ get set }
     
     //functions
     func randSpeed() -> CGFloat
