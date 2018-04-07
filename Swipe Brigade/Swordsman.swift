@@ -18,7 +18,7 @@ class Swordsman: Image, Enemy{
         //init attributes
         attribute = Stats(speed: 0, attack: 0, defense: 0)
         //init image
-        super.init("shiba")
+        super.init("sword_0")
         //randomize stats for the enemy
         attribute.speed = randSpeed()
         attribute.attack = randAtk()
@@ -27,7 +27,9 @@ class Swordsman: Image, Enemy{
         print("Swordsman Attack: ", attribute.attack)
         print("Swordsman Defense: ", attribute.defense)
         //set position
-        position = CGPoint(x: 1000, y: 1000)
+        position = CGPoint(x: 1025, y: 1650)
+        xScale = 7
+        yScale = 7
         print("Position: ", position)
     }
     
@@ -44,7 +46,10 @@ class Swordsman: Image, Enemy{
         return Float(arc4random_uniform(3) + 1)
     }
     func update(_ deltaTime: TimeInterval) {
-        
+        //the enemy moves down the screen
+        //;w; temp placement, change later
+        position.y -= 450 * CGFloat(deltaTime)
+        //when they're sent to jail, their positions will reset or be DESTROYED
     }
     required init?(coder aDecoder: NSCoder){
         fatalError("init(coder:) has not been found")

@@ -33,7 +33,6 @@ class GameViewController: UIViewController {
         self.view = view
     }
     @IBAction func playGame() {
-        print("HELLO")
         let scene = GameScene(size: CGSize(width: 2048, height: 1536))
         let skView = SKView()
         skView.showsFPS = true

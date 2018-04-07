@@ -18,7 +18,7 @@ class Knight: Image, Enemy{
         //init attributes
         attribute = Stats(speed: 0, attack: 0, defense: 0)
         //init image
-        super.init("shiba")
+        super.init("knight_0")
         //randomize stats for the enemy
         attribute.speed = randSpeed()
         attribute.attack = randAtk()
@@ -27,7 +27,9 @@ class Knight: Image, Enemy{
         print("Knight Attack: ", attribute.attack)
         print("Knight Defense: ", attribute.defense)
         //set position
-        position = CGPoint(x: 1000, y: 1650)
+        position = CGPoint(x: 1025, y: 1650)
+        xScale = 7
+        yScale = 7
         print("Position: ", position)
     }
     

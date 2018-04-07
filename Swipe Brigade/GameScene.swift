@@ -15,7 +15,7 @@ class GameScene: SKScene {
     //
     var lastUpdateTime: TimeInterval?
     //test
-    let test1 = Knight()
+    let test1 = Warrior()
     
     override func didMove(to view: SKView) {
         //background
