@@ -28,8 +28,8 @@ class Warrior: Image, Enemy{
         print("Warrior Defense: ", attribute.defense)
         //set position
         position = CGPoint(x: 1025, y: 1650)
-        xScale = 7
-        yScale = 7
+        xScale = 5
+        yScale = 5
         print("Position: ", position)
     }
     

@@ -11,9 +11,10 @@ import Foundation
 import SpriteKit
 
 class Image : SKSpriteNode{
+    var tex: SKTexture!
     required init(_ imagePath: String) {
         //init the image
-        let tex = SKTexture(imageNamed: imagePath)
+        tex = SKTexture(imageNamed: imagePath)
         super.init(texture: tex, color: .clear, size: tex.size())
         //setting attributes
         zPosition = 1
