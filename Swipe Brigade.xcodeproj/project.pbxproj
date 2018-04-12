@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB28B641207C6392001718F5 /* sword.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB28B640207C6392001718F5 /* sword.atlas */; };
-		BB28B643207C6498001718F5 /* warrior.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB28B642207C6498001718F5 /* warrior.atlas */; };
+		BB5DE4AD207FE9AB0067451E /* sword.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB5DE4AA207FE9AA0067451E /* sword.atlas */; };
+		BB5DE4AE207FE9AB0067451E /* knight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB5DE4AB207FE9AA0067451E /* knight.atlas */; };
+		BB5DE4AF207FE9AB0067451E /* warrior.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB5DE4AC207FE9AA0067451E /* warrior.atlas */; };
 		BB94C35D20765A5A00686979 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C35C20765A5A00686979 /* AppDelegate.swift */; };
 		BB94C36320765A5A00686979 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C36220765A5A00686979 /* GameScene.swift */; };
 		BB94C36520765A5A00686979 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C36420765A5A00686979 /* GameViewController.swift */; };
@@ -22,7 +23,6 @@
 		BB94C3952076619100686979 /* Swordsman.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C3942076619100686979 /* Swordsman.swift */; };
 		BB94C3972076619B00686979 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C3962076619B00686979 /* Warrior.swift */; };
 		BB94C39920767B8000686979 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C39820767B8000686979 /* Image.swift */; };
-		BBF4C426207C2FBA00EA6F94 /* knight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BBF4C425207C2FBA00EA6F94 /* knight.atlas */; };
 		BBF4C428207C383500EA6F94 /* TestAnim.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4C427207C383500EA6F94 /* TestAnim.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB28B640207C6392001718F5 /* sword.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = sword.atlas; path = ../../sword.atlas; sourceTree = "<group>"; };
-		BB28B642207C6498001718F5 /* warrior.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = warrior.atlas; path = ../../warrior.atlas; sourceTree = "<group>"; };
+		BB5DE4AA207FE9AA0067451E /* sword.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sword.atlas; sourceTree = SOURCE_ROOT; };
+		BB5DE4AB207FE9AA0067451E /* knight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = knight.atlas; sourceTree = SOURCE_ROOT; };
+		BB5DE4AC207FE9AA0067451E /* warrior.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = warrior.atlas; sourceTree = SOURCE_ROOT; };
 		BB94C35920765A5A00686979 /* Swipe Brigade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swipe Brigade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB94C35C20765A5A00686979 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB94C36220765A5A00686979 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		BB94C3942076619100686979 /* Swordsman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swordsman.swift; sourceTree = "<group>"; };
 		BB94C3962076619B00686979 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
 		BB94C39820767B8000686979 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		BBF4C425207C2FBA00EA6F94 /* knight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = knight.atlas; path = ../../knight.atlas; sourceTree = "<group>"; };
 		BBF4C427207C383500EA6F94 /* TestAnim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAnim.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,9 +117,9 @@
 		BB94C35B20765A5A00686979 /* Swipe Brigade */ = {
 			isa = PBXGroup;
 			children = (
-				BB28B642207C6498001718F5 /* warrior.atlas */,
-				BB28B640207C6392001718F5 /* sword.atlas */,
-				BBF4C425207C2FBA00EA6F94 /* knight.atlas */,
+				BB5DE4AB207FE9AA0067451E /* knight.atlas */,
+				BB5DE4AA207FE9AA0067451E /* sword.atlas */,
+				BB5DE4AC207FE9AA0067451E /* warrior.atlas */,
 				BB94C35C20765A5A00686979 /* AppDelegate.swift */,
 				BB94C36220765A5A00686979 /* GameScene.swift */,
 				BB94C36420765A5A00686979 /* GameViewController.swift */,
@@ -262,12 +262,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB28B641207C6392001718F5 /* sword.atlas in Resources */,
-				BBF4C426207C2FBA00EA6F94 /* knight.atlas in Resources */,
-				BB28B643207C6498001718F5 /* warrior.atlas in Resources */,
 				BB94C36820765A5A00686979 /* Main.storyboard in Resources */,
+				BB5DE4AD207FE9AB0067451E /* sword.atlas in Resources */,
+				BB5DE4AF207FE9AB0067451E /* warrior.atlas in Resources */,
 				BB94C36A20765A5A00686979 /* Assets.xcassets in Resources */,
 				BB94C36D20765A5A00686979 /* LaunchScreen.storyboard in Resources */,
+				BB5DE4AE207FE9AB0067451E /* knight.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
