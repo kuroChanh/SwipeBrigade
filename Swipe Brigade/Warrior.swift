@@ -71,6 +71,9 @@ class Warrior: Image, Enemy{
             position.y -= 350 * (attribute.speed / 4) * CGFloat(deltaTime)
         }
     }
+    func reset(){
+        position = CGPoint(x: 1025, y: 1650)
+    }
     required init?(coder aDecoder: NSCoder){
         fatalError("init(coder:) has not been found")
     }    

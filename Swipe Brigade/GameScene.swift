@@ -14,6 +14,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //background
     let background = Image("background")
     let castle = Castle()
+    //collision
+    let enemyCategory: UInt32 = 0x1 << 0
+    let castleCategory: UInt32 = 0x1 << 1
     //time
     var lastUpdateTime: TimeInterval?
     //enemies on the ground
@@ -27,28 +30,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let test = Knight()
     
     override func didMove(to view: SKView) {
-        //physics
-        physicsWorld.contactDelegate = self
+        //collision
+        self.physicsWorld.contactDelegate = self
         //background
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.xScale = 0.95
         background.yScale = 0.95
         background.zPosition = -1
         addChild(background)
-        
+        //castle
+        castle.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: castle.size.width, height: castle.size.height))
+        castle.physicsBody!.isDynamic = false
+        castle.physicsBody!.categoryBitMask = castleCategory
+        castle.physicsBody!.contactTestBitMask = enemyCategory
+        castle.physicsBody!.collisionBitMask = enemyCategory
         addChild(castle)
         
         //animated enemies
 //        buildEnemyAnim()
 //        animEnemies()
+        
         //test object for more work
         addChild(test)
-        
-        
-        
-        
-        
-        
         
         //swipe gesture
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
@@ -58,6 +61,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         swipeRight.direction = .right
         self.view?.addGestureRecognizer(swipeRight)
     }
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.node?.name == "castle" || contact.bodyB.node?.name == "castle" {
+            //castle health decreases
+            //enemy goes back to start position
+            test.reset()
+        }
+    }
+    
+    
     @IBAction func swiped(gesture: UIGestureRecognizer){
         //result of swipe
         if let swipeGesture = gesture as? UISwipeGestureRecognizer{
@@ -89,7 +101,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         warrior.position.y -= 350 * CGFloat(deltaTime)
         //test
         test.update(deltaTime)
-        print(test.position.x)
     }
     func buildEnemyAnim(){
         //building the knight animation

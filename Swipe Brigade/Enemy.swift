@@ -29,4 +29,5 @@ protocol Enemy {
     func randAtk() -> Float
     func randDef() -> Float
     func update(_ deltaTime: TimeInterval)
+    func reset()
 }
