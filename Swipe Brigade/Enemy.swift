@@ -21,6 +21,8 @@ struct Stats{
 protocol Enemy {
     ///variables
     var attribute: Stats{ get set }
+    var swipedLeft: Bool{ get set }
+    var swipedRight: Bool{ get set }
     
     //functions
     func randSpeed() -> CGFloat

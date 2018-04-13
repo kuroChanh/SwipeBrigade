@@ -10,6 +10,21 @@
 		BB5DE4AD207FE9AB0067451E /* sword.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB5DE4AA207FE9AA0067451E /* sword.atlas */; };
 		BB5DE4AE207FE9AB0067451E /* knight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB5DE4AB207FE9AA0067451E /* knight.atlas */; };
 		BB5DE4AF207FE9AB0067451E /* warrior.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB5DE4AC207FE9AA0067451E /* warrior.atlas */; };
+		BB5DE4B7207FEE100067451E /* FirebaseNanoPB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4B0207FEE0F0067451E /* FirebaseNanoPB.framework */; };
+		BB5DE4B8207FEE100067451E /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4B1207FEE0F0067451E /* FirebaseCore.framework */; };
+		BB5DE4B9207FEE100067451E /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4B2207FEE0F0067451E /* GoogleToolboxForMac.framework */; };
+		BB5DE4BA207FEE100067451E /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4B3207FEE0F0067451E /* nanopb.framework */; };
+		BB5DE4BB207FEE100067451E /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4B4207FEE0F0067451E /* FirebaseAnalytics.framework */; };
+		BB5DE4BC207FEE100067451E /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4B5207FEE0F0067451E /* FirebaseCoreDiagnostics.framework */; };
+		BB5DE4BD207FEE100067451E /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4B6207FEE0F0067451E /* FirebaseInstanceID.framework */; };
+		BB5DE4C0207FEE480067451E /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4BE207FEE480067451E /* FirebaseDatabase.framework */; };
+		BB5DE4C1207FEE480067451E /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4BF207FEE480067451E /* leveldb-library.framework */; };
+		BB5DE4C3207FF19F0067451E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB5DE4C2207FF19F0067451E /* GoogleService-Info.plist */; };
+		BB5DE4C6207FF2CC0067451E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4C5207FF2CC0067451E /* StoreKit.framework */; };
+		BB5DE4C8207FF2DF0067451E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4C7207FF2DF0067451E /* libicucore.tbd */; };
+		BB5DE4CA207FF38F0067451E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5DE4C9207FF38F0067451E /* libsqlite3.tbd */; };
+		BB5DE4CD207FF92B0067451E /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5DE4CC207FF92B0067451E /* network.swift */; };
+		BB5DE4CF208035600067451E /* Castle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5DE4CE208035600067451E /* Castle.swift */; };
 		BB94C35D20765A5A00686979 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C35C20765A5A00686979 /* AppDelegate.swift */; };
 		BB94C36320765A5A00686979 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C36220765A5A00686979 /* GameScene.swift */; };
 		BB94C36520765A5A00686979 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C36420765A5A00686979 /* GameViewController.swift */; };
@@ -47,6 +62,22 @@
 		BB5DE4AA207FE9AA0067451E /* sword.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sword.atlas; sourceTree = SOURCE_ROOT; };
 		BB5DE4AB207FE9AA0067451E /* knight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = knight.atlas; sourceTree = SOURCE_ROOT; };
 		BB5DE4AC207FE9AA0067451E /* warrior.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = warrior.atlas; sourceTree = SOURCE_ROOT; };
+		BB5DE4B0207FEE0F0067451E /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseNanoPB.framework; sourceTree = "<group>"; };
+		BB5DE4B1207FEE0F0067451E /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		BB5DE4B2207FEE0F0067451E /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		BB5DE4B3207FEE0F0067451E /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		BB5DE4B4207FEE0F0067451E /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		BB5DE4B5207FEE0F0067451E /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		BB5DE4B6207FEE0F0067451E /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		BB5DE4BE207FEE480067451E /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
+		BB5DE4BF207FEE480067451E /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
+		BB5DE4C2207FF19F0067451E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB5DE4C5207FF2CC0067451E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BB5DE4C7207FF2DF0067451E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		BB5DE4C9207FF38F0067451E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BB5DE4CB207FF5A30067451E /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		BB5DE4CC207FF92B0067451E /* network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
+		BB5DE4CE208035600067451E /* Castle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Castle.swift; sourceTree = "<group>"; };
 		BB94C35920765A5A00686979 /* Swipe Brigade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swipe Brigade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB94C35C20765A5A00686979 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB94C36220765A5A00686979 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -74,6 +105,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5DE4CA207FF38F0067451E /* libsqlite3.tbd in Frameworks */,
+				BB5DE4C8207FF2DF0067451E /* libicucore.tbd in Frameworks */,
+				BB5DE4C6207FF2CC0067451E /* StoreKit.framework in Frameworks */,
+				BB5DE4B9207FEE100067451E /* GoogleToolboxForMac.framework in Frameworks */,
+				BB5DE4B8207FEE100067451E /* FirebaseCore.framework in Frameworks */,
+				BB5DE4BA207FEE100067451E /* nanopb.framework in Frameworks */,
+				BB5DE4BC207FEE100067451E /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				BB5DE4C0207FEE480067451E /* FirebaseDatabase.framework in Frameworks */,
+				BB5DE4C1207FEE480067451E /* leveldb-library.framework in Frameworks */,
+				BB5DE4BD207FEE100067451E /* FirebaseInstanceID.framework in Frameworks */,
+				BB5DE4B7207FEE100067451E /* FirebaseNanoPB.framework in Frameworks */,
+				BB5DE4BB207FEE100067451E /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +137,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB5DE4C4207FF2CC0067451E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB5DE4C9207FF38F0067451E /* libsqlite3.tbd */,
+				BB5DE4C7207FF2DF0067451E /* libicucore.tbd */,
+				BB5DE4C5207FF2CC0067451E /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB94C35020765A5A00686979 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +154,18 @@
 				BB94C37620765A5A00686979 /* Swipe BrigadeTests */,
 				BB94C38120765A5A00686979 /* Swipe BrigadeUITests */,
 				BB94C35A20765A5A00686979 /* Products */,
+				BB5DE4CB207FF5A30067451E /* Firebase.h */,
+				BB5DE4C2207FF19F0067451E /* GoogleService-Info.plist */,
+				BB5DE4B4207FEE0F0067451E /* FirebaseAnalytics.framework */,
+				BB5DE4B1207FEE0F0067451E /* FirebaseCore.framework */,
+				BB5DE4B5207FEE0F0067451E /* FirebaseCoreDiagnostics.framework */,
+				BB5DE4BE207FEE480067451E /* FirebaseDatabase.framework */,
+				BB5DE4BF207FEE480067451E /* leveldb-library.framework */,
+				BB5DE4B6207FEE0F0067451E /* FirebaseInstanceID.framework */,
+				BB5DE4B0207FEE0F0067451E /* FirebaseNanoPB.framework */,
+				BB5DE4B2207FEE0F0067451E /* GoogleToolboxForMac.framework */,
+				BB5DE4B3207FEE0F0067451E /* nanopb.framework */,
+				BB5DE4C4207FF2CC0067451E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,12 +192,14 @@
 				BB94C3922076617100686979 /* Knight.swift */,
 				BB94C3942076619100686979 /* Swordsman.swift */,
 				BB94C3962076619B00686979 /* Warrior.swift */,
+				BB5DE4CE208035600067451E /* Castle.swift */,
 				BB94C39820767B8000686979 /* Image.swift */,
 				BB94C36920765A5A00686979 /* Assets.xcassets */,
 				BB94C36E20765A5A00686979 /* Info.plist */,
 				BB94C36620765A5A00686979 /* Main.storyboard */,
 				BB94C36B20765A5A00686979 /* LaunchScreen.storyboard */,
 				BBF4C427207C383500EA6F94 /* TestAnim.swift */,
+				BB5DE4CC207FF92B0067451E /* network.swift */,
 			);
 			path = "Swipe Brigade";
 			sourceTree = "<group>";
@@ -268,6 +335,7 @@
 				BB94C36A20765A5A00686979 /* Assets.xcassets in Resources */,
 				BB94C36D20765A5A00686979 /* LaunchScreen.storyboard in Resources */,
 				BB5DE4AE207FE9AB0067451E /* knight.atlas in Resources */,
+				BB5DE4C3207FF19F0067451E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +362,13 @@
 			files = (
 				BBF4C428207C383500EA6F94 /* TestAnim.swift in Sources */,
 				BB94C3972076619B00686979 /* Warrior.swift in Sources */,
+				BB5DE4CD207FF92B0067451E /* network.swift in Sources */,
 				BB94C39920767B8000686979 /* Image.swift in Sources */,
 				BB94C3912076616400686979 /* Enemy.swift in Sources */,
 				BB94C36320765A5A00686979 /* GameScene.swift in Sources */,
 				BB94C36520765A5A00686979 /* GameViewController.swift in Sources */,
 				BB94C35D20765A5A00686979 /* AppDelegate.swift in Sources */,
+				BB5DE4CF208035600067451E /* Castle.swift in Sources */,
 				BB94C3952076619100686979 /* Swordsman.swift in Sources */,
 				BB94C3932076617100686979 /* Knight.swift in Sources */,
 			);
@@ -467,8 +537,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Swipe Brigade/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kuroChanh.Swipe-Brigade";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -481,8 +559,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Swipe Brigade/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kuroChanh.Swipe-Brigade";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
