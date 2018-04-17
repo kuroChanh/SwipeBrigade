@@ -30,4 +30,6 @@ protocol Enemy {
     func randDef() -> Float
     func update(_ deltaTime: TimeInterval)
     func reset()
+    func swipe(_ deltaTime: TimeInterval)
+    func collisionCheck()
 }

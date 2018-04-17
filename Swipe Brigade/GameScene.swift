@@ -101,6 +101,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         warrior.position.y -= 350 * CGFloat(deltaTime)
         //test
         test.update(deltaTime)
+        //castle health
+        print("Castle Health: ", castle.health as Any)
     }
     func buildEnemyAnim(){
         //building the knight animation

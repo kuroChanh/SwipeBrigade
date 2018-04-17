@@ -49,30 +49,36 @@ class Knight: Image, Enemy{
         return Float(arc4random_uniform(3) + 7)
     }
     func update(_ deltaTime: TimeInterval) {
-        //the enemy moves down the screen
-        //;w; CHANGE?
+        //check for swipe
+        swipe(deltaTime)
+        //check collisions
+        collisionCheck()
+    }
+    func reset(){
+        position = CGPoint(x: 1025, y: 1650)
+        swipedLeft = false
+        swipedRight = false
+    }
+    func swipe(_ deltaTime: TimeInterval){
         if(swipedLeft){
-            if(position.y < 375){
-                position.x -= 350 * CGFloat(deltaTime)
-            }
-            else{
-                swipedLeft = false;
-            }
+            position.x -= 350 * CGFloat(deltaTime)
         }
         else if(swipedRight){
-            if(position.y < 375){
-                position.x += 350 * CGFloat(deltaTime)
-            }
-            else{
-                swipedRight = false;
-            }
+            position.x += 350 * CGFloat(deltaTime)
         }
         else{
             position.y -= 350 * (attribute.speed / 4) * CGFloat(deltaTime)
         }
     }
-    func reset(){
-        position = CGPoint(x: 1025, y: 1650)
+    func collisionCheck(){
+        //check if enemy goes out of screen bounds
+        if(position.x <= 500 || position.x >= 1600){
+            reset()
+        }
+        //if enemy goes into the DEATH PIT
+        if((position.x <= 725 && position.y < 400 && position.y > 300) || (position.x >= 1300 && position.y < 400 && position.y > 300)){
+            reset()
+        }
     }
     required init?(coder aDecoder: NSCoder){
         fatalError("init(coder:) has not been found")
