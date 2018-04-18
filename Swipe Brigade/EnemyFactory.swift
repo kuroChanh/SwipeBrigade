@@ -15,7 +15,7 @@ protocol Factory {
 }
 
 class EnemyFactory: Factory{
-    let maxEnemySet = 3
+    let maxEnemySet = 1
     var knights:[Knight] = []
     var swordsmen:[Swordsman] = []
     var warriors:[Warrior] = []

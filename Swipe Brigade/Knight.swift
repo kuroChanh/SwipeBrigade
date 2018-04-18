@@ -27,7 +27,7 @@ class Knight: Image, Enemy{
         attribute.speed = randSpeed()
         attribute.attack = randAtk()
         attribute.defense = randDef()
-        position = CGPoint(x: 1025, y: CGFloat(1650 + arc4random_uniform(200) + 50))
+        position = CGPoint(x: 1025, y: CGFloat(1650 + arc4random_uniform(200) * 5 + 100))
     }
     func randSpeed() -> CGFloat {
         //knight has medium range (4, 5, 6)

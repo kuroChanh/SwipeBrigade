@@ -43,8 +43,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //castle
         addChild(castle)
         //animated enemies
-//        buildEnemyAnim()
-//        animEnemies()
+        buildEnemyAnim()
+        animEnemies()
         
         //add all knights to the scene
         for knightEnemy in gameManager.getKnights(){
@@ -78,6 +78,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             case UISwipeGestureRecognizerDirection.left:
                 print("swiped left!")
                 //check if the user is in the collision area of the object
+                
                 //test.swipedLeft = true
             case UISwipeGestureRecognizerDirection.right:
                 print("swiped right!")
@@ -96,10 +97,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // calc deltaTime
         let deltaTime = currentTime - lastUpdateTime
         self.lastUpdateTime = currentTime
-        //enemies
-        knight.position.y -= 350 * CGFloat(deltaTime)
-        sword.position.y -= 350 * CGFloat(deltaTime)
-        warrior.position.y -= 350 * CGFloat(deltaTime)
         //game manager
         gameManager.update(deltaTime)
         //castle health
@@ -120,7 +117,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         knightFrames = frames
         let firstFrame = knightFrames[0]
         knight = SKSpriteNode(texture: firstFrame)
-        knight.position = CGPoint(x: 1025, y: 1650)
+        knight.position = CGPoint(x: 800, y: 1200)
         knight.xScale = 5
         knight.yScale = 5
         knight.zPosition = 2
@@ -137,7 +134,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         swordFrames = frames2
         let firstFrame2 = swordFrames[0]
         sword = SKSpriteNode(texture: firstFrame2)
-        sword.position = CGPoint(x: 1025, y: 1850)
+        sword.position = CGPoint(x: 1200, y: 500)
         sword.xScale = 5
         sword.yScale = 5
         sword.zPosition = 2
@@ -154,7 +151,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         warriorFrames = frames3
         let firstFrame3 = warriorFrames[0]
         warrior = SKSpriteNode(texture: firstFrame3)
-        warrior.position = CGPoint(x: 1025, y: 2050)
+        warrior.position = CGPoint(x: 700, y: 600)
         warrior.xScale = 5
         warrior.yScale = 5
         warrior.zPosition = 2

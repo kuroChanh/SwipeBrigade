@@ -27,7 +27,7 @@ class Swordsman: Image, Enemy{
         attribute.speed = randSpeed()
         attribute.attack = randAtk()
         attribute.defense = randDef()
-        position = CGPoint(x: 1025, y: CGFloat(1650 + arc4random_uniform(200) + 100))
+        position = CGPoint(x: 1025, y: CGFloat(1650 + arc4random_uniform(200) * 5 + 300))
     }
     
     func randSpeed() -> CGFloat {
