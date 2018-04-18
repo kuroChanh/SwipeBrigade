@@ -27,14 +27,7 @@ class Swordsman: Image, Enemy{
         attribute.speed = randSpeed()
         attribute.attack = randAtk()
         attribute.defense = randDef()
-        print("Swordsman Speed: ", attribute.speed)
-        print("Swordsman Attack: ", attribute.attack)
-        print("Swordsman Defense: ", attribute.defense)
-        //set position
-        position = CGPoint(x: 1025, y: 1650)
-        xScale = 5
-        yScale = 5
-        print("Position: ", position)
+        position = CGPoint(x: 1025, y: CGFloat(1650 + arc4random_uniform(200) + 100))
     }
     
     func randSpeed() -> CGFloat {
@@ -68,7 +61,7 @@ class Swordsman: Image, Enemy{
             position.x += 350 * CGFloat(deltaTime)
         }
         else{
-            position.y -= 350 * (attribute.speed / 4) * CGFloat(deltaTime)
+            position.y -= 350 * CGFloat(deltaTime)
         }
     }
     func collisionCheck(){

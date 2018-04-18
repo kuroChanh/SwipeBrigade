@@ -39,6 +39,7 @@
 		BB94C3972076619B00686979 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C3962076619B00686979 /* Warrior.swift */; };
 		BB94C39920767B8000686979 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94C39820767B8000686979 /* Image.swift */; };
 		BBDFDD1B2086945C00E65C09 /* EnemyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFDD1A2086945C00E65C09 /* EnemyFactory.swift */; };
+		BBDFDD1D2086BB4100E65C09 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFDD1C2086BB4100E65C09 /* GameManager.swift */; };
 		BBF4C428207C383500EA6F94 /* TestAnim.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4C427207C383500EA6F94 /* TestAnim.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		BB94C3962076619B00686979 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
 		BB94C39820767B8000686979 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		BBDFDD1A2086945C00E65C09 /* EnemyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyFactory.swift; sourceTree = "<group>"; };
+		BBDFDD1C2086BB4100E65C09 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		BBF4C427207C383500EA6F94 /* TestAnim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAnim.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,13 +198,14 @@
 				BB94C3962076619B00686979 /* Warrior.swift */,
 				BB5DE4CE208035600067451E /* Castle.swift */,
 				BB94C39820767B8000686979 /* Image.swift */,
+				BBDFDD1A2086945C00E65C09 /* EnemyFactory.swift */,
+				BBDFDD1C2086BB4100E65C09 /* GameManager.swift */,
 				BB94C36920765A5A00686979 /* Assets.xcassets */,
 				BB94C36E20765A5A00686979 /* Info.plist */,
 				BB94C36620765A5A00686979 /* Main.storyboard */,
 				BB94C36B20765A5A00686979 /* LaunchScreen.storyboard */,
 				BBF4C427207C383500EA6F94 /* TestAnim.swift */,
 				BB5DE4CC207FF92B0067451E /* network.swift */,
-				BBDFDD1A2086945C00E65C09 /* EnemyFactory.swift */,
 			);
 			path = "Swipe Brigade";
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				BB94C3952076619100686979 /* Swordsman.swift in Sources */,
 				BB94C3932076617100686979 /* Knight.swift in Sources */,
 				BBDFDD1B2086945C00E65C09 /* EnemyFactory.swift in Sources */,
+				BBDFDD1D2086BB4100E65C09 /* GameManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

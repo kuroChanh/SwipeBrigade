@@ -17,9 +17,9 @@ class Image : SKSpriteNode{
         tex = SKTexture(imageNamed: imagePath)
         super.init(texture: tex, color: .clear, size: tex.size())
         //setting attributes
-        zPosition = 1
-        xScale = 0.6
-        yScale = 0.75
+        xScale = 5
+        yScale = 5
+        zPosition = 2
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -27,14 +27,7 @@ class Knight: Image, Enemy{
         attribute.speed = randSpeed()
         attribute.attack = randAtk()
         attribute.defense = randDef()
-        print("Knight Speed: ", attribute.speed)
-        print("Knight Attack: ", attribute.attack)
-        print("Knight Defense: ", attribute.defense)
-        //set position
-        position = CGPoint(x: 1025, y: 1650)
-        xScale = 5
-        yScale = 5
-        zPosition = 2
+        position = CGPoint(x: 1025, y: CGFloat(1650 + arc4random_uniform(200) + 50))
     }
     func randSpeed() -> CGFloat {
         //knight has medium range (4, 5, 6)
@@ -67,7 +60,7 @@ class Knight: Image, Enemy{
             position.x += 350 * CGFloat(deltaTime)
         }
         else{
-            position.y -= 350 * (attribute.speed / 4) * CGFloat(deltaTime)
+            position.y -= 350 * CGFloat(deltaTime)
         }
     }
     func collisionCheck(){

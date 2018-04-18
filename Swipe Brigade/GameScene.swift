@@ -13,10 +13,8 @@ import UIKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     //background
     let background = Image("background")
+    //castle
     let castle = Castle()
-    //collision
-    let enemyCategory: UInt32 = 0x1 << 0
-    let castleCategory: UInt32 = 0x1 << 1
     //time
     var lastUpdateTime: TimeInterval?
     //enemies on the ground
@@ -26,12 +24,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var knight = SKSpriteNode()
     var sword = SKSpriteNode()
     var warrior = SKSpriteNode()
+    //game manager
+    let gameManager = GameManager()
+    
+    
+    
+    
     //test object
     let test = Knight()
     
     override func didMove(to view: SKView) {
-        //collision
-        self.physicsWorld.contactDelegate = self
         //background
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.xScale = 0.95
@@ -39,21 +41,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.zPosition = -1
         addChild(background)
         //castle
-        castle.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: castle.size.width, height: castle.size.height))
-        castle.physicsBody!.isDynamic = false
-        castle.physicsBody!.categoryBitMask = castleCategory
-        castle.physicsBody!.contactTestBitMask = enemyCategory
-        castle.physicsBody!.collisionBitMask = enemyCategory
         addChild(castle)
-        
         //animated enemies
 //        buildEnemyAnim()
 //        animEnemies()
         
-        //test object for more work
-        addChild(test)
+        //add all knights to the scene
+        for knightEnemy in gameManager.getKnights(){
+            addChild(knightEnemy)
+        }
+        //add all swordsmen to the scene
+        for swordsmanEnemy in gameManager.getSwordsmen(){
+            addChild(swordsmanEnemy)
+        }
+        //add all warriors to the scene
+        for warriorEnemy in gameManager.getWarriors(){
+            addChild(warriorEnemy)
+        }
         
-        //swipe gesture
+        //test object for more work
+        //addChild(test)
+        
+        //swiping
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
         swipeLeft.direction = .left
         self.view?.addGestureRecognizer(swipeLeft)
@@ -61,14 +70,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         swipeRight.direction = .right
         self.view?.addGestureRecognizer(swipeRight)
     }
-    func didBegin(_ contact: SKPhysicsContact) {
-        if contact.bodyA.node?.name == "castle" || contact.bodyB.node?.name == "castle" {
-            //castle health decreases
-            //enemy goes back to start position
-            test.reset()
-        }
-    }
-    
     
     @IBAction func swiped(gesture: UIGestureRecognizer){
         //result of swipe
@@ -77,11 +78,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             case UISwipeGestureRecognizerDirection.left:
                 print("swiped left!")
                 //check if the user is in the collision area of the object
-                test.swipedLeft = true
+                //test.swipedLeft = true
             case UISwipeGestureRecognizerDirection.right:
                 print("swiped right!")
                 //check if the user is in the collision area of the object
-                test.swipedRight = true
+                //test.swipedRight = true
             default:
                 break
             }
@@ -99,10 +100,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         knight.position.y -= 350 * CGFloat(deltaTime)
         sword.position.y -= 350 * CGFloat(deltaTime)
         warrior.position.y -= 350 * CGFloat(deltaTime)
-        //test
-        test.update(deltaTime)
+        //game manager
+        gameManager.update(deltaTime)
         //castle health
         print("Castle Health: ", castle.health as Any)
+        
+        //test
+        //test.update(deltaTime)
     }
     func buildEnemyAnim(){
         //building the knight animation
