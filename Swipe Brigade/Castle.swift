@@ -10,10 +10,12 @@ import Foundation
 import SpriteKit
 
 class Castle : Image{
-    let health: Int?
+    var health: Float
+    //;w; three heart images
+    //;w; game over scene
     required init() {
         //init
-        health = 100
+        health = 90 //multiple of 3 to show 3 hearts for UI
         //init image
         super.init("castle")
         //set position

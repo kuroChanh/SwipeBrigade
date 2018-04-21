@@ -15,19 +15,23 @@ class Knight: Image, Enemy{
     var attribute: Stats
     var swipedLeft: Bool
     var swipedRight: Bool
+    var inArea: Bool
+    var hitCastle: Bool
     
     required init() {
         //init attributes
         attribute = Stats(speed: 0, attack: 0, defense: 0)
         swipedLeft = false
         swipedRight = false
+        inArea = false
+        hitCastle = false
         //init image
         super.init("knight_0")
         //randomize stats for the enemy
         attribute.speed = randSpeed()
         attribute.attack = randAtk()
         attribute.defense = randDef()
-        position = CGPoint(x: 1025, y: CGFloat(1650 + arc4random_uniform(200) * 5 + 100))
+        position = CGPoint(x: 1025, y: 1650)
     }
     func randSpeed() -> CGFloat {
         //knight has medium range (4, 5, 6)
@@ -71,6 +75,17 @@ class Knight: Image, Enemy{
         //if enemy goes into the DEATH PIT
         if((position.x <= 725 && position.y < 400 && position.y > 300) || (position.x >= 1300 && position.y < 400 && position.y > 300)){
             reset()
+        }
+        //if the enemy is in the swipe area
+        if(position.y < 400 && position.y > 300){
+            inArea = true
+        }
+        else{
+            inArea = false
+        }
+        //if the enemy hits the castle
+        if(position.y < 200){
+            hitCastle = true
         }
     }
     required init?(coder aDecoder: NSCoder){

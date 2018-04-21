@@ -14,7 +14,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //background
     let background = Image("background")
     //castle
-    let castle = Castle()
+    var castle = Castle()
     //time
     var lastUpdateTime: TimeInterval?
     //enemies on the ground
@@ -26,12 +26,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var warrior = SKSpriteNode()
     //game manager
     let gameManager = GameManager()
-    
-    
-    
-    
-    //test object
-    let test = Knight()
+    //tap position
+    var tap: CGPoint?
     
     override func didMove(to view: SKView) {
         //background
@@ -45,7 +41,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //animated enemies
         buildEnemyAnim()
         animEnemies()
-        
         //add all knights to the scene
         for knightEnemy in gameManager.getKnights(){
             addChild(knightEnemy)
@@ -58,10 +53,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for warriorEnemy in gameManager.getWarriors(){
             addChild(warriorEnemy)
         }
-        
-        //test object for more work
-        //addChild(test)
-        
         //swiping
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
         swipeLeft.direction = .left
@@ -78,15 +69,72 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             case UISwipeGestureRecognizerDirection.left:
                 print("swiped left!")
                 //check if the user is in the collision area of the object
-                
-                //test.swipedLeft = true
+                if((tap?.y)! < CGFloat(400) && (tap?.y)! > CGFloat(300)){
+                    for checkKnight in gameManager.getKnights(){
+                        if(checkKnight.inArea){
+                            checkKnight.swipedLeft = true;
+                        }
+                    }
+                    for checkSwordsman in gameManager.getSwordsmen(){
+                        if(checkSwordsman.inArea){
+                            checkSwordsman.swipedLeft = true;
+                        }
+                    }
+                    for checkWarrior in gameManager.getWarriors(){
+                        if(checkWarrior.inArea){
+                            checkWarrior.swipedLeft = true;
+                        }
+                    }
+                }
             case UISwipeGestureRecognizerDirection.right:
                 print("swiped right!")
                 //check if the user is in the collision area of the object
-                //test.swipedRight = true
+                if((tap?.y)! < CGFloat(400) && (tap?.y)! > CGFloat(300)){
+                    for checkKnight in gameManager.getKnights(){
+                        if(checkKnight.inArea){
+                            checkKnight.swipedRight = true;
+                        }
+                    }
+                    for checkSwordsman in gameManager.getSwordsmen(){
+                        if(checkSwordsman.inArea){
+                            checkSwordsman.swipedRight = true;
+                        }
+                    }
+                    for checkWarrior in gameManager.getWarriors(){
+                        if(checkWarrior.inArea){
+                            checkWarrior.swipedRight = true;
+                        }
+                    }
+                }
             default:
                 break
             }
+        }
+    }
+    func checkCastle(){
+        for checkKnight in gameManager.getKnights(){
+            if(checkKnight.hitCastle){
+                checkKnight.hitCastle = false
+                castle.health -= Float(checkKnight.attribute.attack)
+            }
+        }
+        for checkSwordsman in gameManager.getSwordsmen(){
+            if(checkSwordsman.hitCastle){
+                checkSwordsman.hitCastle = false
+                castle.health -= Float(checkSwordsman.attribute.attack)
+            }
+        }
+        for checkWarrior in gameManager.getWarriors(){
+            if(checkWarrior.hitCastle){
+                checkWarrior.hitCastle = false
+                castle.health -= Float(checkWarrior.attribute.attack)
+            }
+        }
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches{
+            //position of where the user tapped on the screen will be stored
+            tap = touch.location(in: self)
         }
     }
     override func update(_ currentTime: TimeInterval){
@@ -99,11 +147,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = currentTime
         //game manager
         gameManager.update(deltaTime)
-        //castle health
-        print("Castle Health: ", castle.health as Any)
-        
-        //test
-        //test.update(deltaTime)
+        //check castle
+        checkCastle()
     }
     func buildEnemyAnim(){
         //building the knight animation

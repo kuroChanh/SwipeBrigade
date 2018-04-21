@@ -15,19 +15,23 @@ class Swordsman: Image, Enemy{
     var attribute: Stats
     var swipedLeft: Bool
     var swipedRight: Bool
+    var inArea: Bool
+    var hitCastle: Bool
     
     required init() {
         //init attributes
         attribute = Stats(speed: 0, attack: 0, defense: 0)
         swipedLeft = false
         swipedRight = false
+        inArea = false
+        hitCastle = false
         //init image
         super.init("sword_0")
         //randomize stats for the enemy
         attribute.speed = randSpeed()
         attribute.attack = randAtk()
         attribute.defense = randDef()
-        position = CGPoint(x: 1025, y: CGFloat(1650 + arc4random_uniform(200) * 5 + 300))
+        position = CGPoint(x: 1025, y: 1950)
     }
     
     func randSpeed() -> CGFloat {
@@ -66,8 +70,18 @@ class Swordsman: Image, Enemy{
     }
     func collisionCheck(){
         //check if enemy goes out of screen bounds
-        if(position.x <= 0 || position.x >= 2050){
+        if(position.x <= 500 || position.x >= 1600){
             reset()
+        }
+        //if enemy goes into the DEATH PIT
+        if((position.x <= 725 && position.y < 400 && position.y > 300) || (position.x >= 1300 && position.y < 400 && position.y > 300)){
+            reset()
+        }
+        if(position.y < 400 && position.y > 300){
+            inArea = true
+        }
+        else{
+            inArea = false
         }
     }
     required init?(coder aDecoder: NSCoder){

@@ -23,6 +23,8 @@ protocol Enemy {
     var attribute: Stats{ get set }
     var swipedLeft: Bool{ get set }
     var swipedRight: Bool{ get set }
+    var inArea: Bool{ get set }
+    var hitCastle: Bool{ get set }
     
     //functions
     func randSpeed() -> CGFloat

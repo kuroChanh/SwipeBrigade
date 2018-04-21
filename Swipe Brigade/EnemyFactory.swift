@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SpriteKit
 
 protocol Factory {
     func makeKnight() ->Knight
@@ -15,7 +16,7 @@ protocol Factory {
 }
 
 class EnemyFactory: Factory{
-    let maxEnemySet = 1
+    let maxEnemySet = 3
     var knights:[Knight] = []
     var swordsmen:[Swordsman] = []
     var warriors:[Warrior] = []
@@ -25,12 +26,15 @@ class EnemyFactory: Factory{
         var i = 0
         while(i < maxEnemySet){
             let knight = makeKnight()
+            knight.position.y += CGFloat(900 * i)
             knights.append(knight)
             
             let swordsman = makeSwordsman()
+            swordsman.position.y += CGFloat(900 * i)
             swordsmen.append(swordsman)
             
             let warrior = makeWarrior()
+            warrior.position.y += CGFloat(900 * i)
             warriors.append(warrior)
             
             i += 1
