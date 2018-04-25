@@ -77,11 +77,19 @@ class Warrior: Image, Enemy{
         if((position.x <= 725 && position.y < 400 && position.y > 300) || (position.x >= 1300 && position.y < 400 && position.y > 300)){
             reset()
         }
+        //if the enemy is in the swipe area
         if(position.y < 400 && position.y > 300){
             inArea = true
         }
         else{
             inArea = false
+        }
+        //if the enemy hits the castle
+        if(position.y < 200 && position.y > 150){
+            hitCastle = true
+        }
+        else{
+            hitCastle = false
         }
     }
     required init?(coder aDecoder: NSCoder){

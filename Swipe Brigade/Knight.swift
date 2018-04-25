@@ -84,8 +84,11 @@ class Knight: Image, Enemy{
             inArea = false
         }
         //if the enemy hits the castle
-        if(position.y < 200){
+        if(position.y < 200 && position.y > 190){
             hitCastle = true
+        }
+        else{
+            hitCastle = false
         }
     }
     required init?(coder aDecoder: NSCoder){

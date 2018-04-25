@@ -13,8 +13,8 @@ import UIKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     //background
     let background = Image("background")
-    //castle
-    var castle = Castle()
+    //CHANGE ;w; move the castle to somewhere else
+//    var castle = Castle()
     //time
     var lastUpdateTime: TimeInterval?
     //enemies on the ground
@@ -37,7 +37,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.zPosition = -1
         addChild(background)
         //castle
-        addChild(castle)
+        addChild(gameManager.castle)
         //animated enemies
         buildEnemyAnim()
         animEnemies()
@@ -61,7 +61,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         swipeRight.direction = .right
         self.view?.addGestureRecognizer(swipeRight)
     }
-    
+    //swipe check
     @IBAction func swiped(gesture: UIGestureRecognizer){
         //result of swipe
         if let swipeGesture = gesture as? UISwipeGestureRecognizer{
@@ -111,32 +111,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-    func checkCastle(){
-        for checkKnight in gameManager.getKnights(){
-            if(checkKnight.hitCastle){
-                checkKnight.hitCastle = false
-                castle.health -= Float(checkKnight.attribute.attack)
-            }
-        }
-        for checkSwordsman in gameManager.getSwordsmen(){
-            if(checkSwordsman.hitCastle){
-                checkSwordsman.hitCastle = false
-                castle.health -= Float(checkSwordsman.attribute.attack)
-            }
-        }
-        for checkWarrior in gameManager.getWarriors(){
-            if(checkWarrior.hitCastle){
-                checkWarrior.hitCastle = false
-                castle.health -= Float(checkWarrior.attribute.attack)
-            }
-        }
-    }
+    //get position tapped
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches{
             //position of where the user tapped on the screen will be stored
             tap = touch.location(in: self)
         }
     }
+    //scene update
     override func update(_ currentTime: TimeInterval){
         guard let lastUpdateTime = lastUpdateTime else {
             self.lastUpdateTime = currentTime
@@ -148,8 +130,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //game manager
         gameManager.update(deltaTime)
         //check castle
-        checkCastle()
+//        checkCastle()
     }
+    //building the animations
     func buildEnemyAnim(){
         //building the knight animation
         let knightAnim = SKTextureAtlas(named: "knight")
@@ -202,6 +185,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         warrior.zPosition = 2
         addChild(warrior)
     }
+    //animating the enemies
     func animEnemies(){
         knight.run(SKAction.repeatForever(SKAction.animate(with: knightFrames, timePerFrame: 0.2, resize: false, restore: true)), withKey: "knightAnimation")
         sword.run(SKAction.repeatForever(SKAction.animate(with: swordFrames, timePerFrame: 0.2, resize: false, restore: true)), withKey: "swordAnimation")

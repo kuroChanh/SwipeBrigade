@@ -24,6 +24,17 @@ class Castle : Image{
         yScale = 2
         zPosition = 5
     }
+    func update(_ deltaTime: TimeInterval){
+        //check health
+        if(health <= 0){
+            gameOver()
+        }
+    }
+    func gameOver(){
+        //display game over scene
+        //;w; check the menu stuff to change the scene
+        print("GAMEOVER")
+    }
     required init(_ imagePath: String) {
         fatalError("init has not been implemented")
     }
