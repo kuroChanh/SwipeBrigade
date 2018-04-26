@@ -53,6 +53,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for warriorEnemy in gameManager.getWarriors(){
             addChild(warriorEnemy)
         }
+        //add castle hearts
+        for heart in gameManager.castle.getHearts(){
+            addChild(heart)
+        }
+        //particle test
+        //leftParticle()
         //swiping
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
         swipeLeft.direction = .left
@@ -61,13 +67,47 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         swipeRight.direction = .right
         self.view?.addGestureRecognizer(swipeRight)
     }
+    func jailCheck(){
+        if(gameManager.left){
+            leftParticle()
+            gameManager.left = false
+        }
+        if(gameManager.right){
+            rightParticle()
+            gameManager.right = false
+        }
+    }
+    //particle test
+    func leftParticle(){
+        guard let emitter = SKEmitterNode(fileNamed: "Magic.sks") else {
+            return
+        }
+        emitter.position = CGPoint(x: 725, y: 400)
+        emitter.zPosition = 15
+        emitter.particleSpeed = 200
+        emitter.numParticlesToEmit = 75
+        emitter.particleSize = CGSize(width: 40, height: 40)
+        emitter.particleColor = UIColor.yellow
+        addChild(emitter)
+    }
+    func rightParticle(){
+        guard let emitter = SKEmitterNode(fileNamed: "Magic.sks") else {
+            return
+        }
+        emitter.position = CGPoint(x: 1300, y: 400)
+        emitter.zPosition = 15
+        emitter.particleSpeed = 200
+        emitter.numParticlesToEmit = 75
+        emitter.particleSize = CGSize(width: 40, height: 40)
+        emitter.particleColor = UIColor.yellow
+        addChild(emitter)
+    }
     //swipe check
     @IBAction func swiped(gesture: UIGestureRecognizer){
         //result of swipe
         if let swipeGesture = gesture as? UISwipeGestureRecognizer{
             switch swipeGesture.direction{
             case UISwipeGestureRecognizerDirection.left:
-                print("swiped left!")
                 //check if the user is in the collision area of the object
                 if((tap?.y)! < CGFloat(400) && (tap?.y)! > CGFloat(300)){
                     for checkKnight in gameManager.getKnights(){
@@ -87,7 +127,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             case UISwipeGestureRecognizerDirection.right:
-                print("swiped right!")
                 //check if the user is in the collision area of the object
                 if((tap?.y)! < CGFloat(400) && (tap?.y)! > CGFloat(300)){
                     for checkKnight in gameManager.getKnights(){
@@ -129,8 +168,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = currentTime
         //game manager
         gameManager.update(deltaTime)
-        //check castle
-//        checkCastle()
+        //jail particles
+        jailCheck()
     }
     //building the animations
     func buildEnemyAnim(){

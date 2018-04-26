@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB4FE4DF209159B300C16EE7 /* Heart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4FE4DE209159B300C16EE7 /* Heart.swift */; };
+		BB4FE4E22091827C00C16EE7 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = BB4FE4E02091827C00C16EE7 /* Magic.sks */; };
+		BB4FE4E32091827C00C16EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB4FE4E12091827C00C16EE7 /* Assets.xcassets */; };
 		BB5DE4AD207FE9AB0067451E /* sword.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB5DE4AA207FE9AA0067451E /* sword.atlas */; };
 		BB5DE4AE207FE9AB0067451E /* knight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB5DE4AB207FE9AA0067451E /* knight.atlas */; };
 		BB5DE4AF207FE9AB0067451E /* warrior.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BB5DE4AC207FE9AA0067451E /* warrior.atlas */; };
@@ -60,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB4FE4DE209159B300C16EE7 /* Heart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heart.swift; sourceTree = "<group>"; };
+		BB4FE4E02091827C00C16EE7 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Magic.sks; path = Assets.xcassets/Magic.sks; sourceTree = "<group>"; };
+		BB4FE4E12091827C00C16EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets/Assets.xcassets; sourceTree = "<group>"; };
 		BB5DE4AA207FE9AA0067451E /* sword.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sword.atlas; sourceTree = SOURCE_ROOT; };
 		BB5DE4AB207FE9AA0067451E /* knight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = knight.atlas; sourceTree = SOURCE_ROOT; };
 		BB5DE4AC207FE9AA0067451E /* warrior.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = warrior.atlas; sourceTree = SOURCE_ROOT; };
@@ -195,6 +201,7 @@
 				BB94C3942076619100686979 /* Swordsman.swift */,
 				BB94C3962076619B00686979 /* Warrior.swift */,
 				BB5DE4CE208035600067451E /* Castle.swift */,
+				BB4FE4DE209159B300C16EE7 /* Heart.swift */,
 				BB94C39820767B8000686979 /* Image.swift */,
 				BBDFDD1A2086945C00E65C09 /* EnemyFactory.swift */,
 				BBDFDD1C2086BB4100E65C09 /* GameManager.swift */,
@@ -203,6 +210,8 @@
 				BB94C36620765A5A00686979 /* Main.storyboard */,
 				BB94C36B20765A5A00686979 /* LaunchScreen.storyboard */,
 				BB5DE4CC207FF92B0067451E /* network.swift */,
+				BB4FE4E02091827C00C16EE7 /* Magic.sks */,
+				BB4FE4E12091827C00C16EE7 /* Assets.xcassets */,
 			);
 			path = "Swipe Brigade";
 			sourceTree = "<group>";
@@ -333,11 +342,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB94C36820765A5A00686979 /* Main.storyboard in Resources */,
+				BB4FE4E22091827C00C16EE7 /* Magic.sks in Resources */,
 				BB5DE4AD207FE9AB0067451E /* sword.atlas in Resources */,
 				BB5DE4AF207FE9AB0067451E /* warrior.atlas in Resources */,
 				BB94C36A20765A5A00686979 /* Assets.xcassets in Resources */,
 				BB94C36D20765A5A00686979 /* LaunchScreen.storyboard in Resources */,
 				BB5DE4AE207FE9AB0067451E /* knight.atlas in Resources */,
+				BB4FE4E32091827C00C16EE7 /* Assets.xcassets in Resources */,
 				BB5DE4C3207FF19F0067451E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +380,7 @@
 				BB94C3912076616400686979 /* Enemy.swift in Sources */,
 				BB94C36320765A5A00686979 /* GameScene.swift in Sources */,
 				BB94C36520765A5A00686979 /* GameViewController.swift in Sources */,
+				BB4FE4DF209159B300C16EE7 /* Heart.swift in Sources */,
 				BB94C35D20765A5A00686979 /* AppDelegate.swift in Sources */,
 				BB5DE4CF208035600067451E /* Castle.swift in Sources */,
 				BB94C3952076619100686979 /* Swordsman.swift in Sources */,
